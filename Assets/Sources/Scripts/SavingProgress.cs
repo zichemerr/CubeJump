@@ -2,10 +2,8 @@
 
 public class SavingProgress
 {
-    private const string СompletedLevel = nameof(СompletedLevel);
-
-    public void Save(int indexScene)
+    public void Save(int indexScene, string key)
     {
-        PlayerPrefs.SetInt(СompletedLevel, indexScene);
+        PlayerPrefs.SetInt(key, indexScene);
     }
 }

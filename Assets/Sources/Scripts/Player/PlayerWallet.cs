@@ -4,7 +4,7 @@ public class PlayerWallet : MonoBehaviour
 {
     [SerializeField] private WalletView _walletView;
 
-    private int _coins;
+    public int Coins { get; private set; }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +17,7 @@ public class PlayerWallet : MonoBehaviour
 
     private void AddCoin()
     {
-        _coins++;
-        _walletView.ShowDisplay(_coins);
+        Coins++;
+        _walletView.ShowDisplay(Coins);
     }
 }

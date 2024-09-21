@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
+    private const string ÑompletedLevel = nameof(ÑompletedLevel);
+
     [SerializeField] private MovementRoot _movementRoot;
     [SerializeField] private Player _player;
     [SerializeField] private PlayerDeath _playerDeath;
@@ -37,8 +39,8 @@ public class Level : MonoBehaviour
     private void OnFinished()
     {
         int indexActiveScene = SceneManager.GetActiveScene().buildIndex;
-        _savingProgress.Save(indexActiveScene);
-        Debug.Log($"index active scene - {indexActiveScene}");
+        Debug.Log(indexActiveScene);
+        _savingProgress.Save(indexActiveScene, ÑompletedLevel);
         SceneManager.LoadScene(0);
     }
 }
