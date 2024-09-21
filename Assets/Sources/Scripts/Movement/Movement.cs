@@ -15,8 +15,7 @@ public class Movement
 
     public void Move()
     {
-        _rigidbody.velocity =
-            new Vector3(0, _rigidbody.velocity.y, _speed);
+        _rigidbody.velocity = new Vector3(0, _rigidbody.velocity.y, _speed);
     }
 
     public void Jump()

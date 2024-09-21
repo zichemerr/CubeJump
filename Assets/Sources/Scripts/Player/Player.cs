@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public event Action Finished;
+    public event Action Died;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Obstacle>())
-            Finished?.Invoke();
+            Died?.Invoke();
     }
 }

@@ -26,7 +26,7 @@ public class MovementRoot : MonoBehaviour
         _isGrounded = true;
     }
 
-    private void OnJump()
+    public void OnJump()
     {
         if (_isGrounded == false)
             return;

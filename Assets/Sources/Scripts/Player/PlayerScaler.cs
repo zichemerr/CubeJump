@@ -13,7 +13,13 @@ public class PlayerScaler : MonoBehaviour
         _defaltScale = transform.localScale;
     }
 
-    private void OnDown()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+            OnDown();
+    }
+
+    public void OnDown()
     {
         if (transform.localScale == _defaltScale)
         {
@@ -26,5 +32,6 @@ public class PlayerScaler : MonoBehaviour
     {
         yield return new WaitForSeconds(_delay);
         transform.localScale = _defaltScale;
+        transform.position += new Vector3(0, 0.5f);
     }
 }
